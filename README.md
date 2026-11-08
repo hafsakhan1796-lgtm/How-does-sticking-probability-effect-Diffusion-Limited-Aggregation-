@@ -36,7 +36,71 @@ In his article, Sanders states that “The larger-scale structure of a DLA clust
 
 Starting with a smooth surface does not necessarily mean the resulting cluster will be smooth. In DLA, the formation of bumps on the surface is due to **shot noise** in the arrival of the particle. Shot noise is the random fluctuations in the arrival of particles. Because of screening and shot noise, a smooth surface can lead to bumps and a rougher surface, yielding a rough cluster. How do these bumps form? They can grow because of instability, which is followed by tip-splitting. Tip splitting happens due to screening, where some growing branches can split into tips due to random fluctuations; thus, repeated splitting, growing, and branching can give rise to fractals (structures with patterns and complexity that can appear across different length scales).
 
+## Methods 
+I used Python using Google Colab. The main libraries used were: 
+
+- randon - used for generating random particle movement and attachment
+- math - for distance measurements and coordinate calculations.
+- matplotlib - for visualizing the resulting clusters.
+
+## Experiment 1: Square-Lattice DLA 
+
+The first part of the experiment used a square lattice. Each walker (particle) could move one step up, down, left or right at a time
+
+The process began with a single particle at the origin (0,0). New walkers were released from a random point on a circle of 5 steps outside the cluster's current edge, this allowed the launch circle to grow as the cluster grew. The walker moved randomly, one step at a time, for up to 5,000 steps. 
+
+Once the walker was next to a particle already in the cluster, it stuck with a probability equal to the sticking probability. If the particle failed to attach, it kept walking. A walker that has not stuck after 5,000 steps was discarded. 
+
+4OO walkers were run for each sticking probability. 
+
+## Fractal Dimensions measurement 
+
+I counted that particles within radius 4 and 10 of the center. I did this for 5 separate clusters per sticking probability and averaged the results. 
 
 
+## Experiment 2: Hexagonal Lattice and Snowflake images. 
+
+I also wanted to explore different shapes of the clusters. For this, I changed the lattice so that each particle has 6 neighbors instead of 4. To make snowflake-style images, I took small cluster about 140 walkers and rotated copies of it by 60 degrees six times. 
+
+## Results 
+
+Sticking probability comparison 
+
+- **1.0 - 100% sticking probability:** at this sticking probability the clusters had long, thin arms reaching outwards. The clusters had empty gaps between them.
+- **0.5 - 50% sticking probability:** this was a tricky one because the shape varied from run to run. Sometimes the cluster looked bulky and sometimes it had long arms similar to the 1.0 clusters.
+- **0.1- 10% sticking probability:** at this sticking probability the clusters were more rounder, shorter and more filled in with very little empty gaps between them.
+
+## Fractal-Dimension (5 runs per setting) 
+
+| Sticking probability | Average D | Range of 5 runs|
+|----------------------|-----------|----------------|           
+| 1.0                  | 1.48      | 1.31 to 1.69   |
+| 0.5                  | 1.68      | 1.42 to 1.93   |
+| 0.1                  | 1.62      | 1.58 to 1.67   |
+
+## Discussion 
+
+- Shape of the cluster is dependent on stickiness. The difference between the shape of the three clusters indicate that stickiness does change the shape of the clusters. The 0.1 clusters were more round and more filled in compared to the 1.0 clusters. This supports the idea of screening, that sticking particles rarely reach gaps before attaching.
+- The 0.1 clusters were most consistent of the three. For the 0.1 clusters the D was between 1.58 t0 1.67 for all five runs. Compared to the 1.0 and 0.5 clusters. A possible explanation could be that when a walkers sticks on first contact, early branches can take over the growth.
+
+
+## Limitations 
+
+- I only ran 5 runs per setting and the clusters are pretty small (up to 400 walkers) 
+- Random particle movement can produce different structures between different runs.
+- Not every walker attacked to the cluster and they were discarded after 5,000 steps.
+
+## Conclusion 
+
+Through this project I learned about DLA clusters, sticking probabilities, random walkers, and screening with computational model. 
+
+## Acknowledgments 
+
+I wrote the code step by step with the help from an AI assistant (Claude), and ran, debugged all of it myself. 
+
+## References 
+
+- Sander, L. M. (2000). Diffusion-limited aggregation: A kinetic critical phenomenon? Contemporary Physics, 41(4), 203-218.
+- Witten, T. A., & Sander, L. M. (1981). Diffusion-limited aggregation, a kinetic critical phenomenon. Physical Review Letters, 47, 1400.
 
 
