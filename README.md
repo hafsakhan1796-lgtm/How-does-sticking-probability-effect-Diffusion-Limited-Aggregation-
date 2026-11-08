@@ -66,9 +66,31 @@ I also wanted to explore different shapes of the clusters. For this, I changed t
 
 Sticking probability comparison 
 
+
 - **1.0 - 100% sticking probability:** at this sticking probability the clusters had long, thin arms reaching outwards. The clusters had empty gaps between them.
 - **0.5 - 50% sticking probability:** this was a tricky one because the shape varied from run to run. Sometimes the cluster looked bulky and sometimes it had long arms similar to the 1.0 clusters.
 - **0.1- 10% sticking probability:** at this sticking probability the clusters were more rounder, shorter and more filled in with very little empty gaps between them.
+
+### Square-Lattice DLA
+
+The following figure compares cluster morphology across the three
+sticking probabilities.
+
+![Square Lattice DLA](dla_stickiness.png)
+
+### Triangular-Lattice DLA
+
+The following figure shows cluster growth on a triangular lattice
+under the same sticking probabilities.
+
+![Triangular Lattice DLA](snowflakes_stickiness.png)
+
+### Color Visualization
+
+Additional color-coded visualization of the triangular-lattice
+DLA structures.
+
+![Snowflake Color](snowflake_color.png)
 
 ## Fractal-Dimension (5 runs per setting) 
 
