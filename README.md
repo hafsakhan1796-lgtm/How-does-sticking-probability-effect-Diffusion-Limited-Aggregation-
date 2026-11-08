@@ -78,17 +78,16 @@ sticking probabilities.
 
 ![Square Lattice DLA](dla_stickiness.png)
 
-### Triangular-Lattice DLA
+### Snowflake DLA
 
-The following figure shows cluster growth on a triangular lattice
-under the same sticking probabilities.
+The following figure shows snowflake-like cluster growth
+under different sticking probabilities.
 
-![Triangular Lattice DLA](snowflakes_stickiness.png)
+![Snowflake DLA](snowflakes_stickiness.png)
 
-### Color Visualization
+### Color Visualization of Snowflake DLA
 
-Additional color-coded visualization of the triangular-lattice
-DLA structures.
+Color-coded visualization of the resulting snowflake-like structures.
 
 ![Snowflake Color](snowflake_color.png)
 
