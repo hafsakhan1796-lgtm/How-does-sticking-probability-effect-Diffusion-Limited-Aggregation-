@@ -119,6 +119,12 @@ Through this project I learned about DLA clusters, sticking probabilities, rando
 
 I wrote the code step by step with the help from an AI assistant (Claude), and ran, debugged all of it myself. 
 
+## Code and Reproducibility
+
+The DLA simulations were implemented in Python using Google Colab.
+
+[View the Python Notebook](mini_nanoparticle_project.ipynb)
+
 ## References 
 
 - Sander, L. M. (2000). Diffusion-limited aggregation: A kinetic critical phenomenon? Contemporary Physics, 41(4), 203-218.
