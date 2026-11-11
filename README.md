@@ -119,7 +119,7 @@ Through this project I learned about DLA clusters, sticking probabilities, rando
 
 I wrote the code step by step with the help from an AI assistant (Claude), and ran, debugged all of it myself. 
 
-## Code and Reproducibility
+## Code 
 
 The DLA simulations were implemented in Python using Google Colab.
 
